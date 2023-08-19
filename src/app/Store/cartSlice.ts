@@ -1,12 +1,6 @@
 "use client";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import products from "../../app/data/products.json";
-
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-}
+import products from "../../app/data/db.json";
 
 interface CartItem {
   productId: number;

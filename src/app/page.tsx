@@ -1,20 +1,18 @@
 'use client';
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { Route, Router, Routes } from 'react-router-dom';
+import HomePageComponent from './components/HomePage/page';
+import ProductPage from './components/productPage/page';
 
-import Cart from './components/cart/page';
-import SearchList from './components/search/page';
-import ProductsSlider from './components/slider/page';
-
-const Home: React.FC = () => {
-
+function MyApp() {
   return (
     <>
-      <SearchList/>
-      <Cart/>
-      <ProductsSlider/>
+      <Routes>
+        <Route path='/' element={<HomePageComponent/>}/>
+        <Route path={`/product/:productId`} element={<ProductPage/>}/>
+      </Routes>
     </>
   );
-};
+}
 
-export default Home;
+export default MyApp;
