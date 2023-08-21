@@ -5,6 +5,8 @@ import products from "../../app/data/db.json";
 interface CartItem {
   productId: number;
   quantity: number;
+  productName: string;
+  productPrice : number
 }
 
 interface CartState {
@@ -23,13 +25,23 @@ const cartSlice = createSlice({
   reducers: {
     addToCart(state, action: PayloadAction<number>) {
       const productId = action.payload;
-      const existingCartItem = state.cartItems.find(
-        (item) => item.productId === productId
-      );
-      if (existingCartItem) {
-        existingCartItem.quantity += 1;
-      } else {
-        state.cartItems.push({ productId, quantity: 1 });
+      const selectedProduct = state.products.find((product:any) => product.product_id === productId);
+
+      if (selectedProduct) {
+        const existingCartItem = state.cartItems.find(
+          (item) => item.productId === productId
+        );
+        
+        if (existingCartItem) {
+          existingCartItem.quantity += 1;
+        } else {
+          state.cartItems.push({
+            productId,
+            quantity: 1,
+            productName: selectedProduct.product_name,
+            productPrice: selectedProduct.product_price
+          });
+        }
       }
     },
     plusToCart(
@@ -37,6 +49,8 @@ const cartSlice = createSlice({
       action: PayloadAction<{ productId: number; quantity: number }>
     ) {
       const { productId, quantity } = action.payload;
+      const productName = initialState.products.name;
+      const productPrice = initialState.products.price;
       const existingCartItem = state.cartItems.find(
         (item) => item.productId === productId
       );
@@ -44,7 +58,7 @@ const cartSlice = createSlice({
       if (existingCartItem) {
         existingCartItem.quantity = quantity;
       } else {
-        state.cartItems.push({ productId, quantity });
+        state.cartItems.push({ productId, quantity,productName,productPrice});
       }
     },
     removeFromCart(state, action: PayloadAction<number>) {

@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { plusToCart } from "@/app/Store/cartSlice";
@@ -19,7 +20,7 @@ const SearchList: React.FC = () => {
   const [count, setCount] = useState<number>(1);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const term = e.target.value; // Не изменять регистр введенного текста
+    const term = e.target.value; 
     setSearchTerm(term);
 
     if (term === "") {
@@ -28,7 +29,7 @@ const SearchList: React.FC = () => {
     } else {
       const matchingProducts = products.filter(
         (p: Product) =>
-          p.name.toLowerCase().startsWith(term.toLowerCase()) // Привести название товара к нижнему регистру для сравнения
+          p.name.toLowerCase().startsWith(term.toLowerCase()) 
       );
       setFoundProducts(matchingProducts);
       setSelectedProduct(null);
@@ -86,3 +87,4 @@ const SearchList: React.FC = () => {
 };
 
 export default SearchList;
+

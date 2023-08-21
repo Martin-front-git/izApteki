@@ -1,0 +1,9 @@
+.logoBlock{
+    @apply w-[170px] h-[43.88px] flex justify-between items-center;
+    .logoImg{
+        @apply w-[43.88px] h-[43.88px] ;
+    }
+    .logoName{
+        @apply w-[114px] h-[24.6px] text-[#00395D] font-medium;
+    }
+}

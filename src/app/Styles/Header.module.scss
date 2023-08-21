@@ -1,0 +1,19 @@
+.header{
+    width: 80%;
+    margin: 0px auto;
+    position: relative;
+    .infoBlock{
+        margin: 0;
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        top: 70px;
+        left: 10%;
+    }
+    .cart{
+        position: absolute;
+        left : 70%;
+        top: 70px;
+    }
+}

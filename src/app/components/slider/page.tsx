@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import products from "../../data/db.json";
@@ -29,26 +30,28 @@ const ProductsSlider: React.FC = () => {
   };
 
   return (
-    <div className="border-2">
-      <h2>Slider</h2>
-      {products.map((pr: any) => (
-        <div key={pr.id}>
-          <div>
-            <li key={pr.id}>
-              <Link to={`/product/${pr.id}`}>
-                {pr.name} - {pr.price}
-              </Link>
-            </li>
+    <>
+      <div className="border-2">
+        <h2>Slider</h2>
+        {products.map((pr: any) => (
+          <div key={pr.id}>
+            <div>
+              <li key={pr.id}>
+                <Link to={`/product/${pr.id}`}>
+                  {pr.name} - {pr.price}
+                </Link>
+              </li>
+            </div>
+            <div>
+              <button onClick={() => handleDecrement(pr.id)}>-</button>
+              <span>{counters[pr.id] || 1}</span>
+              <button onClick={() => handleIncrement(pr.id)}>+</button>
+              <button onClick={() => handleAddToCart(pr.id)}>в корзину</button>
+            </div>
           </div>
-          <div>
-            <button onClick={() => handleDecrement(pr.id)}>-</button>
-            <span>{counters[pr.id] || 1}</span>
-            <button onClick={() => handleIncrement(pr.id)}>+</button>
-            <button onClick={() => handleAddToCart(pr.id)}>в корзину</button>
-          </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 };
 

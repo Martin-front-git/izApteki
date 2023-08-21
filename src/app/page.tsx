@@ -1,15 +1,19 @@
 'use client';
 import React from 'react';
 import { Route, Router, Routes } from 'react-router-dom';
-import HomePageComponent from './components/HomePage/page';
 import ProductPage from './components/productPage/page';
+import { ErrorComponent } from './components/error/page';
+import MainPage from './Layouts/MainLayout/mainPage/page';
+import CatalogComponent from './components/catalog/page';
 
 function MyApp() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<HomePageComponent/>}/>
+        <Route path='/' element={<MainPage/>}/>
+        <Route path='/catalog' element={<CatalogComponent/>}/>
         <Route path={`/product/:productId`} element={<ProductPage/>}/>
+        <Route path={`/*`} element={<ErrorComponent/>}/>
       </Routes>
     </>
   );
