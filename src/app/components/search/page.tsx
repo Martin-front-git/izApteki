@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { plusToCart } from "@/app/Store/cartSlice";
 import { Link } from "react-router-dom";
 import { RootState } from "@/app/Store/page";
+import style from '@/app/Styles/Search.module.scss';
 
 interface Product {
   id: number;
@@ -49,6 +50,7 @@ const SearchList: React.FC = () => {
         placeholder="Поиск товаров..."
         value={searchTerm}
         onChange={handleInputChange}
+        className={style.searchInput}
       />
       {foundProducts.length > 0 && (
         <ul className="product-suggestions">

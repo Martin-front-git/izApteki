@@ -11,7 +11,7 @@ function MyApp() {
     <>
       <Routes>
         <Route path='/' element={<MainPage/>}/>
-        <Route path='/catalog' element={<CatalogComponent/>}/>
+        <Route path='/components/catalog' element={<CatalogComponent/>}/>
         <Route path={`/product/:productId`} element={<ProductPage/>}/>
         <Route path={`/*`} element={<ErrorComponent/>}/>
       </Routes>

@@ -1,0 +1,19 @@
+.productBlock {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 220px;
+  .products {
+    border-radius: 3px;
+    border: 1px solid var(--blue, #00395d);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--blue, #00395D);
+    line-height: 18px;
+    text-align: left;
+    padding: 5px 10px;
+  }
+}
