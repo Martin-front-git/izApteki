@@ -1,6 +1,6 @@
 import React from 'react'
 import prodList from '@/app/data/prodList.json';
-import style from '@/app/Styles/ProductList.module.scss';
+import style from '@/app/Styles/Header/ProductList.module.scss';
 
 let ProductList =()=>{
 

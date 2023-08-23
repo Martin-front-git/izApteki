@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState,useRef} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart, plusToCart } from "../../Store/cartSlice";
+import { removeFromCart, plusToCart } from "../../../Store/cartSlice";
 import { RootState } from "@/app/Store/page";
-import style from "@/app/Styles/Cart.module.scss";
+import style from "@/app/Styles/Header/Cart.module.scss";
+import Modal from "react-modal";
 
 interface CartItem {
   productId: number;
@@ -10,7 +11,6 @@ interface CartItem {
   productName: string;
   productPrice: number;
 }
-
 
 const Cart: React.FC = () => {
   const { cartItems } = useSelector((state: RootState) => state.cart);
@@ -30,20 +30,37 @@ const Cart: React.FC = () => {
     dispatch(plusToCart({ productId, quantity: newQuantity }));
   };
 
-  const isOpen = () => {
+  const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
+
+  const modalRef = useRef<HTMLDivElement | null>(null);
+  
+  const handleClickOutside = (event: MouseEvent) => {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+      setIsModalOpen(false);
+    }
+  };
+  useEffect(() => {
+    if (isModalOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isModalOpen]);
 
   return (
     <>
       {/* cart button */}
-      <button onClick={isOpen} className={style.cartButton}>
+      <button onClick={toggleModal} className={style.cartButton}>
         <div className={style.cartSvgContainer}>
           <svg className={style.cartSvg}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="20"
               viewBox="0 0 22 20"
               fill="none"
             >
@@ -66,32 +83,41 @@ const Cart: React.FC = () => {
         <p className={style.cartText}>Корзина</p>
       </button>
       {/* cart modal menu */}
+      <div >
+      <Modal
+       isOpen={isModalOpen}
+      overlayClassName={style.overlay}
+       className={style.cartItemsContainer}
+      >
+        
       {isModalOpen && (
-        <div className={style.cardModalMenu}>
+        <div ref={modalRef}>
+        <ul>
+          {cartItems.map((item: CartItem) => (
+            <li key={item.productId} className={style.cartItem}>
+              <span>{item.productName}</span>
+    <span>Цена: {item.productPrice} руб.</span>
+              <span>Товар #{item.productId}</span>
+              <span>Количество: {item.quantity}</span>
+              <div>
+                <button onClick={() => handleUpdateQuantity(item.productId, item.quantity - 1)}>-</button>
+                <span>{item.quantity}</span>
+                <button onClick={() => handleUpdateQuantity(item.productId, item.quantity + 1)}>+</button>
+              </div>
+              <button onClick={() => handleRemoveFromCart(item.productId)}>
+                Удалить
+              </button>
+              <button>Купить</button>
+            </li>
+          ))}
           <p>Общее количество товаров: {totalQuantity}</p>
-          <div className={style.cartItemsContainer}>
-            <ul>
-              {cartItems.map((item: CartItem) => (
-                <li key={item.productId} className={style.cartItem}>
-                  <span>Товар #{item.productId}</span>
-                  <span>Количество: {item.quantity}</span>
-                  {/* <span>Name: {product.productName}</span>
-                  <span>Price: {product.productPrice}</span> */}
-                  <div>
-                    <button onClick={() => handleUpdateQuantity(item.productId, item.quantity - 1)}>-</button>
-                    <span>{item.quantity}</span>
-                    <button onClick={() => handleUpdateQuantity(item.productId, item.quantity + 1)}>+</button>
-                  </div>
-                  <button onClick={() => handleRemoveFromCart(item.productId)}>
-                    Удалить
-                  </button>
-                  <button>Купить</button>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+          <button onClick={toggleModal}>X</button>
+        </ul>
+      </div>
       )}
+      </Modal>
+      </div>
+      
     </>
   );
 };

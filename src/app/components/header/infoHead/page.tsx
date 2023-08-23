@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '@/app/Styles/infoHead.module.scss';
+import style from '@/app/Styles/Header/infoHead.module.scss';
 
 const InfoHeadComponent = () => {
   return (

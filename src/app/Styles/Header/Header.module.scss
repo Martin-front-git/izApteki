@@ -1,98 +1,86 @@
 .header {
   width: 80%;
-  height: 410px;
+  height: 25vw;
   margin: 0px auto;
   position: relative;
   .infoBlock {
     margin: 0;
     padding: 0;
   }
-  .logo {
-    position: absolute;
-    top: 70px;
-    left: 0;
-  }
-  .cart {
-    position: absolute;
-    left: 67%;
-    top: 70px;
-  }
-  .register {
-    width: 170px;
-    height: 54px;
-    flex-shrink: 0;
-    border-radius: 5px;
-    background: var(--grey, #f5f5f5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-shrink: 0;
-    color: var(--blue, #00395d);
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    position: absolute;
-    right: 0;
-    top: 70px;
-    text-align: center;
-  }
-  .searchBlock {
+  .logoBlock{
     width: 100%;
-    height: 60px;
+    height: 4vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    top: 140px;
+    position: relative;
+    margin: 1.5vw 0vw;
+    .cart {
+      position: absolute;
+      right: 14vw;
+    }
+  }
+  .searchBlock {
+    width: 100%;
+    height: 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vw 0vw;
+    .search{
+      position: absolute;
+      left: 10vw;
+    }
     .catalog {
       .catalogLink {
-        width: 167px;
-        height: 54px;
+        width: 10vw;
+        height: 3vw;
         flex-shrink: 0;
         border-radius: 5px 0px 0px 5px;
         background: var(--f-5-f-5-f-5, #f5f5f5);
         color: var(--blue, #00395d);
         font-family: Montserrat;
-        font-size: 20px;
+        font-size: 1.5vw;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 600;
         line-height: normal;
       }
     }
     .productButton {
-      width: 124px;
-      height: 54px;
-      border-radius: 5px;
+      width: 11vw;
+      height: 5vw;
       border-radius: 5px;
       background: var(--grey, #f5f5f5);
       color: var(--blue, #00395d);
       text-align: center;
       font-family: Montserrat;
-      font-size: 16px;
+      font-size: 1.5vw;
       font-style: normal;
-      font-weight: 700;
+      font-weight: 600;
       line-height: normal;
-      margin-left: 18%;
+      position: absolute;
+      right : 14vw;
     }
     .searchButton {
-      width: 170px;
-      height: 54px;
+      width: 13vw;
+      height: 5vw;
       flex-shrink: 0;
       border-radius: 5px;
       background: var(--light-blue, #0099e5);
       color: var(--white, #fff);
       font-family: Montserrat;
-      font-size: 16px;
+      font-size: 1.5vw;
       font-style: normal;
-      font-weight: 700;
+      font-weight: 600;
       line-height: normal;
     }
   }
+  .productList{
+    height: 4vw;
+    margin: 1.5vw 0vw;
+  }
   .banner {
     width: 100%;
-    position: absolute;
-    top: 17rem;
+    margin: 1.5vw 0vw;
   }
 }

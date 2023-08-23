@@ -1,0 +1,51 @@
+.bannerBlock {
+  width: 100%;
+  height: 9vw;
+  border-radius: 4px;
+  background-color: #25a9eb;
+  position: relative;
+  display: flex;
+  align-items: center;
+  .tabletGroup {
+    width: 20vw;
+    height: 8vw;
+    position: absolute;
+    left: 2vw;
+    top: 0.5vw;
+  }
+  .tabletGroupTwo {
+    width: 20vw;
+    height: 8vw;
+    position: absolute;
+    right: 2vw;
+    top: 0.5vw;
+  }
+  .bannerText {
+    width: 50vw;
+    height: 9vw;
+    color: #fff;
+    text-align: center;
+    font-size: 2.5vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-family: Montserrat;
+    position: absolute;
+    top: 1vw;
+    left: 15vw;
+  }
+  .deliveryText {
+    width: 30vw;
+    height: 1vw;
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 0.66vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: 8vw;
+    left: 24vw;
+  }
+}

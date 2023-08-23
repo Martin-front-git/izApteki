@@ -1,13 +1,12 @@
 'use client';
 import './globals.css'
 import type { Metadata } from 'next'
-//import { Inter } from 'next/font/google'
 import { Provider } from 'react-redux'
 import {store} from './Store/page'
 import { BrowserRouter } from 'react-router-dom';
 import { Montserrat } from 'next/font/google'
 
-//const inter = Inter({ subsets: ['latin'] })
+
 const inter = Montserrat({ subsets: ['latin'] ,weight : '700'})
 
 export const metadata: Metadata = {

@@ -6,8 +6,9 @@ interface CartItem {
   productId: number;
   quantity: number;
   productName: string;
-  productPrice : number
+  productPrice: number;
 }
+
 
 interface CartState {
   products: any;
@@ -24,26 +25,25 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart(state, action: PayloadAction<number>) {
-      const productId = action.payload;
-      const selectedProduct = state.products.find((product:any) => product.product_id === productId);
+  const productId = action.payload;
+  const selectedProduct = state.products.find((product: any) => product.product_id === productId);
 
-      if (selectedProduct) {
-        const existingCartItem = state.cartItems.find(
-          (item) => item.productId === productId
-        );
-        
-        if (existingCartItem) {
-          existingCartItem.quantity += 1;
-        } else {
-          state.cartItems.push({
-            productId,
-            quantity: 1,
-            productName: selectedProduct.product_name,
-            productPrice: selectedProduct.product_price
-          });
-        }
-      }
-    },
+  if (selectedProduct) {
+    const existingCartItem = state.cartItems.find((item) => item.productId === productId);
+
+    if (existingCartItem) {
+      existingCartItem.quantity += 1;
+    } else {
+      state.cartItems.push({
+        productId,
+        quantity: 1,
+        productName: selectedProduct.product_name,
+        productPrice: selectedProduct.product_price
+      });
+    }
+  }
+},
+
     plusToCart(
       state,
       action: PayloadAction<{ productId: number; quantity: number }>

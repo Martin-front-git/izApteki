@@ -1,0 +1,19 @@
+.registerButton {
+  width: 13vw;
+  height: 5vw;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: var(--grey, #f5f5f5);
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  .registerText {
+    flex-shrink: 0;
+    color: var(--blue, #00395d);
+    font-family: Montserrat;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
