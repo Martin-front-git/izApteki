@@ -1,0 +1,22 @@
+.burgerBlock{
+    @apply w-[100%] h-[10vw] md:hidden;
+    .buttonBlock{
+        @apply w-[100%] h-[10vw] flex justify-between items-center my-[3vw];
+        .burgerButton{
+            @apply w-[10vw] h-[10vw] inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white
+        }
+        .logo{
+            @apply max-md:w-[25vw] max-md:h-[7vw];
+        }
+        .cart{
+            @apply max-md:right-[0];
+        }
+        .searchIcon{
+            @apply w-[7vw] h-[7vw] ;
+        }
+    }
+    
+}
+.burgerBody{
+    @apply px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center absolute w-[100%] h-screen bg-white;
+}

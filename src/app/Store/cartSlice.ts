@@ -7,6 +7,7 @@ interface CartItem {
   quantity: number;
   productName: string;
   productPrice: number;
+  productImage : string;
 }
 
 
@@ -38,7 +39,8 @@ const cartSlice = createSlice({
         productId,
         quantity: 1,
         productName: selectedProduct.product_name,
-        productPrice: selectedProduct.product_price
+        productPrice: selectedProduct.product_price,
+        productImage : selectedProduct.product_image
       });
     }
   }
@@ -51,6 +53,7 @@ const cartSlice = createSlice({
       const { productId, quantity } = action.payload;
       const productName = initialState.products.name;
       const productPrice = initialState.products.price;
+      const productImage = initialState.products.image;
       const existingCartItem = state.cartItems.find(
         (item) => item.productId === productId
       );
@@ -58,7 +61,7 @@ const cartSlice = createSlice({
       if (existingCartItem) {
         existingCartItem.quantity = quantity;
       } else {
-        state.cartItems.push({ productId, quantity,productName,productPrice});
+        state.cartItems.push({ productId, quantity,productName,productPrice,productImage});
       }
     },
     removeFromCart(state, action: PayloadAction<number>) {

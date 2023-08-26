@@ -1,7 +1,7 @@
 import React from 'react'
 import style from '@/app/Styles/Header/Banner.module.scss';
 import Image from 'next/image';
-import tablet from '@/app/images/tablet.png'
+import tablet from '../../../../../public/images/tablet.png'
 
 const Banner = () => {
   return (

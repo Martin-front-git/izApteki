@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import logoImg from "@/app/images/logoImg.png";
+import logoImg from '../../../../../public/images/logoImg.png';
 import style from "@/app/Styles/Header/Logo.module.scss";
 
 const LogoComponent = () => {

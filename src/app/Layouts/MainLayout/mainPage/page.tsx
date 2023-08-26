@@ -1,13 +1,13 @@
 import HeaderComponent from '../../../components/header/page';
-import ProductsSlider from '../../../components/slider/page';
 
-let MainPage=() =>{
-    return (
-      <>
-        <HeaderComponent />
-        {/* <ProductsSlider />  */}
-      </>
-    );
-  }
+
+
+function MainPage() {
+  return (
+    <>
+      <HeaderComponent />
+    </>
+  );
+}
 
   export default MainPage;

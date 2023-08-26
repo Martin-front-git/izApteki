@@ -1,51 +1,15 @@
 .bannerBlock {
-  width: 100%;
-  height: 9vw;
-  border-radius: 4px;
-  background-color: #25a9eb;
-  position: relative;
-  display: flex;
-  align-items: center;
+  @apply w-full h-[9vw] rounded-md bg-blue-500 relative flex items-center my-[2vw] max-md:h-[15vw] max-md:my-[3vw];
   .tabletGroup {
-    width: 20vw;
-    height: 8vw;
-    position: absolute;
-    left: 2vw;
-    top: 0.5vw;
+    @apply w-[20vw] h-[8vw] absolute left-[2vw] top-[0.5vw] max-md:w-[16vw] max-md:h-[7vw] max-md:top-[3.5vw] max-md:left-[1vw];
   }
   .tabletGroupTwo {
-    width: 20vw;
-    height: 8vw;
-    position: absolute;
-    right: 2vw;
-    top: 0.5vw;
+    @apply w-[20vw] h-[8vw] absolute right-[2vw] top-[0.5vw] max-md:w-[16vw] max-md:h-[7vw] max-md:top-[3.5vw] max-md:right-[1vw];
   }
   .bannerText {
-    width: 50vw;
-    height: 9vw;
-    color: #fff;
-    text-align: center;
-    font-size: 2.5vw;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-family: Montserrat;
-    position: absolute;
-    top: 1vw;
-    left: 15vw;
+    @apply w-[50vw] h-[8vw] text-white text-center text-[2.2vw] font-semibold leading-normal font-Montserrat absolute  left-[15vw] max-md:w-[55vw] max-md:h-[10vw] max-md:left-[12vw] max-md:top-[2vw] max-md:text-[3.2vw];
   }
   .deliveryText {
-    width: 30vw;
-    height: 1vw;
-    color: #fff;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 0.66vw;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: absolute;
-    top: 8vw;
-    left: 24vw;
+    @apply w-[30vw] h-[1vw] text-white text-center font-Montserrat text-[1vw] font-medium leading-normal absolute top-[7.5vw] left-[24vw] max-md:w-[46vw] max-md:h-[1vw] max-md:left-[17vw] max-md:top-[12.5vw] max-md:text-[1.2vw];
   }
 }

@@ -1,9 +1,9 @@
 .logoBlock{
-    @apply w-[10vw] h-[2vw] flex justify-between items-center;
+    @apply w-[10vw] h-[2vw] flex justify-between items-center max-md:w-[24vw] max-md:h-[7vw];
     .logoImg{
-        @apply w-[4vw] h-[4vw] ;
+        @apply w-[4vw] h-[4vw] max-md:w-[7vw] max-md:h-[7vw];
     }
     .logoName{
-        @apply w-[7vw] h-[2vw] text-[#00395D] font-medium text-[1.3vw] align-middle;
+        @apply w-[7vw] h-[2vw] text-[#00395D] font-medium text-[1.3vw] align-middle max-md:w-[17vw] max-md:h-[6vw] max-md:text-[4vw];
     }
 }
