@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body{
-    width :80%;
-    margin: 0px auto;
+    @apply w-[80%] m-auto max-md:w-[95%];
 }

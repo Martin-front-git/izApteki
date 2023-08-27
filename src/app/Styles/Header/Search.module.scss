@@ -1,5 +1,5 @@
 .searchBlock {
-  @apply flex justify-between items-center font-Montserrat text-[1.5vw] max-md:w-[100%] max-md:h-[8vw] max-md:my-[3vw] max-md:relative ;
+  @apply flex justify-between items-center font-Montserrat text-[1.5vw] max-md:w-[100%] max-md:h-[8vw] max-md:my-[3vw] max-md:relative max-sm:my-[5vw];
   .catalogLink {
     @apply w-[12vw] h-[5vw] rounded-tl rounded-bl bg-[#f5f5f5] text-[#00395d] font-bold leading-normal flex justify-center items-center max-md:hidden;
   }
@@ -16,7 +16,7 @@
       @apply flex w-[42vw] h-[5vw] flex-col justify-center flex-shrink-0 text-[rgba(0,57,93,0.4)] font-medium leading-normal max-md:w-[100%] max-md:h-[8vw] max-md:text-[3vw] ;
     }
     .searchIcon{
-      @apply md:hidden  max-md:w-[7.8vw] max-md:h-[7.8vw] max-md:bg-[#0099e5] max-md:absolute max-md:right-0 max-md:rounded;
+      @apply md:hidden  max-md:w-[7.8vw] max-md:h-[7.8vw] max-md:bg-[#0099e5] max-md:absolute max-md:right-0 max-md:rounded ;
     }
 
     .importMenu {

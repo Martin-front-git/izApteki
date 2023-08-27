@@ -4,12 +4,14 @@ import { removeFromCart, plusToCart } from "../../../Store/cartSlice";
 import { RootState } from "@/app/Store/page";
 import style from "@/app/Styles/Header/Cart.module.scss";
 import Modal from "react-modal";
+import Image from "next/image";
 
 interface CartItem {
   productId: number;
   quantity: number;
   productName: string;
   productPrice: number;
+  productImage : string
 }
 
 const Cart: React.FC = () => {
@@ -96,9 +98,10 @@ const Cart: React.FC = () => {
           {cartItems.map((item: CartItem) => (
             <li key={item.productId} className={style.cartItem}>
               <span>{item.productName}</span>
-    <span>Цена: {item.productPrice} руб.</span>
+              <span>Цена: {item.productPrice} руб.</span>
               <span>Товар #{item.productId}</span>
               <span>Количество: {item.quantity}</span>
+              <Image src={item.productImage} alt={item.productName} width={200} height={200}/>
               <div>
                 <button onClick={() => handleUpdateQuantity(item.productId, item.quantity - 1)}>-</button>
                 <span>{item.quantity}</span>
@@ -123,4 +126,3 @@ const Cart: React.FC = () => {
 };
 
 export default Cart;
-

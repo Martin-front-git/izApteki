@@ -68,12 +68,9 @@ const SearchList: React.FC = () => {
                   <span className="product-suggestions">
                     {foundProducts.map((product) => (
                       <div key={product.id} className={style.selectedButton}>
-                        <button
-                        onClick={() => handleProductSelect(product)}
-                        //className={selectedProduct && selectedProduct.id === product.id ? "selected" : ""}
-                        >
-                        {product.name}
-                    </button>
+                        <button onClick={() => handleProductSelect(product)}>
+                          {product.name}
+                        </button>
                       </div>
                   ))}
                 </span>

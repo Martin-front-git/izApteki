@@ -1,7 +1,7 @@
 .burgerBlock{
     @apply w-[100%] h-[10vw] md:hidden;
     .buttonBlock{
-        @apply w-[100%] h-[10vw] flex justify-between items-center my-[3vw];
+        @apply w-[100%] h-[10vw] flex justify-between items-center my-[3vw] max-sm:my-[5vw];
         .burgerButton{
             @apply w-[10vw] h-[10vw] inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white
         }

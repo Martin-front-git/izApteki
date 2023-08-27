@@ -25,24 +25,20 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addToCart(state, action: PayloadAction<number>) {
-  const productId = action.payload;
-  const selectedProduct = state.products.find((product: any) => product.product_id === productId);
+addToCart(state, action: PayloadAction<CartItem>) {
+  const { productId, quantity, productName, productPrice, productImage } = action.payload;
+  const existingCartItem = state.cartItems.find((item) => item.productId === productId);
 
-  if (selectedProduct) {
-    const existingCartItem = state.cartItems.find((item) => item.productId === productId);
-
-    if (existingCartItem) {
-      existingCartItem.quantity += 1;
-    } else {
-      state.cartItems.push({
-        productId,
-        quantity: 1,
-        productName: selectedProduct.product_name,
-        productPrice: selectedProduct.product_price,
-        productImage : selectedProduct.product_image
-      });
-    }
+  if (existingCartItem) {
+    existingCartItem.quantity += quantity;
+  } else {
+    state.cartItems.push({
+      productId,
+      quantity,
+      productName,
+      productPrice,
+      productImage,
+    });
   }
 },
 

@@ -1,5 +1,5 @@
 .productBlock {
-  @apply w-[79vw] h-[4vw] flex items-center absolute mt-[1vw] max-md:flex max-md:flex-col justify-start;
+  @apply w-[79vw] h-[4vw] flex items-center absolute mt-[1vw] max-md:flex max-md:flex-col justify-between;
   .products {
     @apply rounded-md border border-blue-900 font-Montserrat text-[1.2vw] font-semibold text-blue-900 text-center px-[1vw] max-md:text-[3vw] max-md:my-[1vw];
   }

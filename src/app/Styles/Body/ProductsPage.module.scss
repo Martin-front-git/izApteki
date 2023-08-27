@@ -1,0 +1,44 @@
+.productBlock {
+    @apply w-full h-[30vw] flex flex-col mt-[3vw] text-[#00395d] max-sm:w-[80%] max-sm:h-[90vw] max-sm:m-auto max-sm:justify-center;
+    .productName {
+      @apply w-full h-[4vw] font-Montserrat text-[3vw] font-medium leading-[4vw] my-[2vw] max-sm:text-[4.5vw];
+    }
+    .doubleBlock{
+      @apply flex justify-around items-start my-[2vw] max-sm:flex max-sm:flex-col max-sm:items-center max-sm:w-[100%] max-sm:h-[100%];
+      .imageBlock {
+          @apply w-[23vw] h-[20vw] rounded-[2vw] border border-gray-200 border-solid flex max-sm:w-[100%] max-sm:h-[50%];
+          .image {
+            @apply w-[23vw] h-[20vw] m-auto max-sm:w-[50%] max-sm:h-[100%];
+          }
+        }
+        .byBlock {
+          @apply w-1/2 h-[25vw] flex justify-start items-center max-sm:w-[100%] max-sm:h-[50%];
+          .counterBlock {
+            @apply w-full h-full flex flex-col justify-around;
+            .infoDiv {
+              @apply flex text-[1.5vw] max-sm:text-[2.5vw] max-sm:justify-center;
+            }
+            .byBtnBlock {
+              @apply w-5/6 h-[10vw] flex justify-around items-center max-sm:w-[100%] max-sm:h-[10vw];
+              .price {
+                @apply w-[9vw] h-[4vw] font-Montserrat text-[2.5vw] font-medium leading-[4vw] max-sm:w-[23vw] max-sm:h-[10vw] max-sm:text-[6vw] max-sm:flex max-sm:items-center max-sm:justify-center;
+              }
+              .byBtnDiv {
+                  @apply w-[10vw] h-[8vw] flex flex-col items-center justify-around max-sm:w-[40vw] max-sm:h-[10vw] max-sm:flex max-sm:flex-row;
+                .minusBtn,
+                .plusBtn {
+                  @apply w-[2vw] h-[2vw] text-[2vw] flex justify-center items-center max-sm:w-[5vw] max-sm:h-[5vw] max-sm:text-[4vw];
+                }
+                .count {
+                  @apply flex w-[2vw] h-[2vw] justify-center items-center text-[1.5vw] max-sm:w-[5vw] max-sm:h-[5vw] max-sm:text-[4vw];
+                }
+                .byButton {
+                  @apply flex w-[10vw] h-[4vw] justify-center items-center text-white text-[1.5vw] font-Montserrat  font-semibold rounded-md bg-[#0099E5]  max-sm:w-[20vw] max-sm:h-[10vw] max-sm:text-[3vw];
+                }
+              }
+            }
+          }
+        }
+    }  
+  }
+  
