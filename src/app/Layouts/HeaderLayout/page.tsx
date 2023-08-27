@@ -1,22 +1,24 @@
 "use client";
 import React, { ReactNode } from "react";
 import HeaderComponent from "../../components/header/page";
-import SearchList from "@/app/components/header/search/page";
-import BodyComponent from "@/app/components/body/page";
+import Footer from "@/app/components/footer/page";
 
 interface HeaderLayoutProps {
   children: ReactNode;
 }
 
-const HeaderLayout: React.FC<HeaderLayoutProps> = ({ children}) => {
+const HeaderLayout: React.FC<HeaderLayoutProps> = ({children}) => {
   return (
     <>
-      <div className="relative">
+      <header className="relative">
         <HeaderComponent />
-      </div>
-      <div >
+      </header>
+      <div>
         {children}
-        </div>
+      </div>
+      <footer>
+        <Footer/>
+      </footer>
     </>
   );
 };
