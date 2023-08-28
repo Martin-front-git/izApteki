@@ -1,0 +1,13 @@
+.partnersBlock {
+    @apply w-full h-[15vw] rounded-md max-sm:h-[50vw] max-sm:mt-[5vw];
+    .caption {
+      @apply w-full h-[4vw] text-[#00395d] font-Montserrat text-left text-[2.5vw] font-medium max-sm:text-[4.5vw] max-sm:h-[8vw];
+    }
+    .imageDiv {
+      @apply w-full h-24 rounded-md border border-solid grid grid-cols-4 gap-1 justify-items-center items-center justify-center max-sm:grid-cols-2;
+      .partnersImage {
+        @apply w-full;
+      }
+    }
+  }
+  

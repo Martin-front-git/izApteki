@@ -1,0 +1,123 @@
+{
+  "homeInfo": [
+    {
+      "id": 1,
+      "name": "Хилак Форте Капли, 100 мл.",
+      "price": 527,
+      "image": "/images/xilak_forte.png"
+    },
+    {
+      "id": 2,
+      "name": "Нурофен 30 кап. жидкие",
+      "price": 199,
+      "image": "/images/nurofen.png"
+    },
+    {
+      "id": 2,
+      "name": "Нурофен 30 кап. жидкие",
+      "price": 199,
+      "image": "/images/nurofen.png"
+    },
+    {
+      "id": 2,
+      "name": "Нурофен 30 кап. жидкие",
+      "price": 199,
+      "image": "/images/nurofen.png"
+    },
+    {
+      "id": 3,
+      "name": "Витамин СТаблетки, 20 шт. 10...",
+      "price": 145,
+      "image": "/images/vitamin.png"
+    },
+    {
+      "id": 4,
+      "name": "Гастрарекс Капсулы, 30 шт. 52... ",
+      "price": 285,
+      "image": "/images/gastra.png"
+    },
+    {
+      "id": 5,
+      "name": "Ингавирин Капсулы, 7 шт, 90 мг",
+      "price": 546,
+      "image": "/images/ingavarin.png"
+    },
+    {
+      "id": 6,
+      "name": "Дезодорант аэрозоль Голд му...",
+      "price": 290,
+      "image": "/images/desodorant.png"
+    }
+  ],
+  "selections": [
+    {
+      "id": 1,
+      "name": "Мама и малыш",
+      "image": "/images/selections/1.png",
+      "svg": "/images/selections/st/st_1.png"
+    },
+    {
+      "id": 2,
+      "name": "Диета,спорт,питание",
+      "image": "/images/selections/2.png",
+      "svg": "/images/selections/st/st_2.png"
+    },
+    {
+      "id": 3,
+      "name": "Лекарственные препараты",
+      "image": "/images/selections/3.png",
+      "svg": "/images/selections/st/st_3.png"
+    },
+    {
+      "id": 4,
+      "name": "Гигиена",
+      "image": "/images/selections/4.png",
+      "svg": "/images/selections/st/st_3.png"
+    },
+    {
+      "id": 5,
+      "name": "Красота",
+      "image": "/images/selections/5.png",
+      "svg": "/images/selections/st/st_2.png"
+    },
+    {
+      "id": 6,
+      "name": "Витамины и БАД",
+      "image": "/images/selections/6.png",
+      "svg": "/images/selections/st/st_1.png"
+    }
+  ],
+  "prodList": [
+    { "id": 1, "name": "Сиропы" },
+    { "id": 2, "name": "Витамины" },
+    { "id": 3, "name": "От кашля" },
+    { "id": 4, "name": "Желудок" },
+    { "id": 5, "name": "Головная боль" },
+    { "id": 6, "name": "Сухая кожа" },
+    { "id": 7, "name": "Шампуни" },
+    { "id": 8, "name": "Капли" },
+    { "id": 9, "name": "Крем от морщин" }
+  ],
+  "partners" : [
+    {
+      "id" : 1,
+      "name" : "Сбербанк",
+      "image" : "/images/partners/1.png"
+    },
+    {
+      "id" : 2,
+      "name" : "РосселхозБанк",
+      "image" : "/images/partners/2.png"
+    },
+    {
+      "id" : 3,
+      "name" : "Альфа-Банк",
+      "image" : "/images/partners/3.png"
+    },
+    {
+      "id" : 4,
+      "name" : "Газпром",
+      "image" : "/images/partners/4.png"
+    }
+  ]
+}

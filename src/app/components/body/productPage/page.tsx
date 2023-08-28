@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../Store/cartSlice";
-import products from "../../../data/db.json";
+import data from "../../../../../public/db.json";
 import HomePageLayout from "../../../Layouts/HeaderLayout/page";
 import style from "@/app/Styles/Body/ProductsPage.module.scss";
 import Image from "next/image";
+
+const products = data.homeInfo
 
 interface Product {
   id: number;
