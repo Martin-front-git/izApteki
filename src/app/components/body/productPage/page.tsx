@@ -63,8 +63,8 @@ const ProductPage: React.FC = () => {
               className={style.image}
               src={product.image}
               alt={product.name}
-              width={100}
-              height={50}
+              width={1200}
+              height={1200}
             />
           </div>
           <div className={style.byBlock}>

@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name" : "Мама и малыш",
+        "image": "/images/selections/1.png",
+        "svg" : "/images/selections/st/st_1.png"
+    },
+    {
+        "id": 2,
+        "name" : "Диета,спорт,питание",
+        "image": "/images/selections/2.png",
+        "svg" : "/images/selections/st/st_2.png"
+    },
+    {
+        "id": 3,
+        "name" : "Лекарственные препараты",
+        "image": "/images/selections/3.png",
+        "svg" : "/images/selections/st/st_3.png"
+    },
+    {
+        "id": 4,
+        "name" : "Гигиена",
+        "image": "/images/selections/4.png",
+        "svg" : "/images/selections/st/st_3.png"
+    },
+    {
+        "id": 5,
+        "name" : "Красота",
+        "image": "/images/selections/5.png",
+        "svg" : "/images/selections/st/st_2.png"
+    },
+    {
+        "id": 6,
+        "name" : "Витамины и БАД",
+        "image": "/images/selections/6.png",
+        "svg" : "/images/selections/st/st_1.png"
+    }
+]
