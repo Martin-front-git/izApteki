@@ -1,0 +1,22 @@
+.textBlock {
+    @apply w-full h-auto text-[#00395d] my-[5vw];
+    .textDiv_1 {
+      @apply w-full h-auto py-[0.5vw];
+      .caption_1 {
+        @apply w-full h-[4vw] text-[#00395d] font-Montserrat text-[3.5vw] text-left font-medium max-sm:h-[8vw] max-sm:text-[5.5vw];
+      }
+      p {
+        @apply w-full h-auto font-Montserrat text-base font-light py-[1.5vw];
+      }
+    }
+    .textDiv_2 {
+      @apply w-full h-auto py-[0.5vw];
+      .caption_2 {
+        @apply w-full h-[4vw] text-[#00395d] font-Montserrat text-[2.5vw] text-left font-medium max-sm:h-[8vw] max-sm:text-[5.5vw];
+      }
+      p {
+        @apply w-full h-auto font-Montserrat text-base font-light py-[1.5vw];
+      }
+    }
+  }
+  

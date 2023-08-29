@@ -1,0 +1,16 @@
+.catalogBlock {
+  @apply w-full h-[80vw] my-[2vw] text-[#00395d] font-Montserrat max-sm:h-auto max-md:h-auto;
+  .caption {
+    @apply w-full h-[4vw] flex items-center py-[3vw] px-[0.5vw] text-[3vw] font-medium max-sm:h-[15vw] max-sm:text-[8vw] max-sm:flex max-sm:justify-center max-md:h-[12vw] max-md:flex max-md:justify-center max-md:text-[7vw];
+  }
+  .catalogGridBlock {
+    @apply grid grid-cols-3 justify-center content-center max-md:grid-cols-2 max-md:h-auto max-sm:grid-cols-1 max-sm:items-center max-sm:h-auto max-sm:text-center max-md:text-center max-md:text-[3vw] max-md:font-normal;
+
+    .Listcaption {
+      @apply w-full h-[5vw] font-bold text-[1.8vw] flex items-center max-sm:justify-center max-md:justify-center  max-sm:h-[10vw] max-sm:text-[5vw] max-sm:my-[2vw] max-sm:mt-[10vw] max-md:text-[3vw] max-md:my-[4vw];
+    }
+    p{
+      @apply text-[1.2vw] font-normal cursor-pointer hover:duration-[0.5s] hover:text-[1.3vw] max-sm:w-[100%] max-sm:h-[6vw] max-sm:text-[4vw] max-sm:text-center max-md:h-[5vw] max-md:flex max-md:items-center max-md:justify-center max-md:text-[2.5vw] max-md:hover:text-[2.6vw];
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.searchBlock {
+    @apply w-full h-[30vw] text-[#00395d] font-Montserrat flex flex-col justify-between py-[3vw] max-md:hidden;
+    .caption {
+      @apply w-full h-[4vw]  text-[2.5vw] font-medium max-sm:h-[8vw] max-sm:text-[4.5vw];
+    }
+    .drugDiv {
+      @apply w-full h-[4vw] grid grid-cols-3 justify-center items-center;
+      .drugs {
+        @apply h-[4vw] text-[1.2vw] cursor-pointer bg-[#F5F5F5] text-black flex justify-center items-center;
+        &:hover {
+          @apply bg-[#E5EBEF] ;
+        }
+      }
+    }
+    .alphaDiv {
+      @apply w-full flex justify-between;
+      .letters {
+        &:hover {
+          @apply bg-[#00395d] text-white ;
+        }
+      }
+    }
+    .prodDiv {
+      @apply w-full h-[10vw] grid grid-cols-5 justify-center;
+      .products {
+        @apply text-[1.2vw] cursor-pointer px-[2vw] rounded-[0.2vw];
+        &:hover {
+          @apply bg-[#00395d] text-white;
+        }
+      }
+    }
+  }
+  

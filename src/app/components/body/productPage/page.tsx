@@ -6,6 +6,7 @@ import data from "../../../../../public/db.json";
 import HomePageLayout from "../../../Layouts/HeaderLayout/page";
 import style from "@/app/Styles/Body/ProductsPage.module.scss";
 import Image from "next/image";
+import InfoText from "../infoText/page";
 
 const products = data.homeInfo
 
@@ -106,8 +107,11 @@ const ProductPage: React.FC = () => {
               </div>
             </div>
           </div>
+          
         </div>
+        
       </div>
+      <InfoText/>
     </HomePageLayout>
   );
 };
