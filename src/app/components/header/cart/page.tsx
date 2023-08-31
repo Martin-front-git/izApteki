@@ -94,16 +94,16 @@ const Cart: React.FC = () => {
         
       {isModalOpen && (
         <div ref={modalRef}>
-          <div >
+          <div className={style.cartBlock}>
             <div className={style.exitButtonDiv}>
               <p>Корзина</p>
               <button className={style.exitButton} onClick={toggleModal}>X</button>
             </div>
-            
+            <div className={style.cartItem}>
             {cartItems.map((item: CartItem) => (
               <>
               <Link to={`/product/${item.productId}`}>
-                    <div key={item.productId} className={style.cartItem}>
+                    <div key={item.productId} >
                 <>
                   <div className={style.infoDiv}>
                     <Image className={style.image} src={item.productImage} alt={item.productName} width={200} height={200}/>
@@ -132,11 +132,12 @@ const Cart: React.FC = () => {
               </Link></>
               
             ))}
-          </div>
-              <div className={style.byDiv}>
+            </div>
+            <div className={style.byDiv}>
                 <p>Общее количество товаров: {totalQuantity}</p>
                 <button>Купить</button>
               </div>
+          </div>  
       </div>
       )}
       </Modal>

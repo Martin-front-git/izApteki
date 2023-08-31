@@ -10,61 +10,57 @@
     @apply flex-shrink-0 text-[#00395d] text-[1.4vw] font-bold not-italic leading-normal font-Montserrat absolute left-[5.5vw] max-md:hidden;
   }
 }
-.cartItemsContainer{
-  @apply w-[90%] h-[90%] m-auto bg-blue-900 flex overflow-y-auto relative top-[5%];
-  .exitButtonDiv{
-    width: 100%;
-    height: 5vw;
-    display: flex;
-    justify-content: space-between;
-    img{
-      height: 13vw;
-      margin-left: 3%;
-      margin-top: 3%;
+.cartItemsContainer {
+  @apply w-[88.5vw] h-[90%] m-auto bg-white flex text-[#00395d] relative top-[5%] border-blue-600 border border-solid max-sm:h-[90vh] max-sm:w-[88.5vw];
+  .cartBlock{
+    @apply flex flex-col w-[88.3vw] h-[86%] overflow-y-auto bg-white text-[#00395d] max-sm:h-[92%] max-sm:w-[87.3vw];
+    .exitButtonDiv {
+      @apply w-[88.3vw] h-[3vw] flex justify-between fixed z-10 bg-white max-sm:h-[10vw] max-sm:w-[88.1vw];
+      p {
+        @apply w-1/5 flex justify-center items-center text-[3vw] max-sm:w-[30%] max-sm:h-[9vw] max-sm:text-[5vw];
+      }
+      .exitButton {
+        @apply w-[3vw] h-[3vw] absolute right-[1vw] text-[2vw] max-sm:right-[1vw] max-sm:h-[10vw] max-sm:w-[10vw] max-sm:text-[7vw];
+      }
     }
-    p{
-      width: 20vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 3vw;
-      color: white;
+    .cartItem {
+      @apply w-[86vw] h-[80%] mt-[3vw] text-center flex flex-col gap-[0.3vw] max-sm:mt-[10vw] max-sm:h-[86%] max-sm:w-[86vw] ;
+  
+      .infoDiv {
+        @apply grid grid-cols-6 font-Montserrat w-[85vw] h-[8vw] items-center ml-[1vw] text-[1.5vw] border-blue-700 border border-solid max-sm:ml-[1vw] max-sm:h-[23vw] max-sm:w-[85vw] max-sm:grid-cols-3 max-sm:justify-center max-sm:text-[3.4vw];
+        .image {
+          @apply w-[7vw] h-[7vw] ml-[1vw] max-sm:ml-[7vw] max-sm:h-[12vw] max-sm:w-[14vw] max-sm:left-[10%];
+        }
+        .countButtons {
+          @apply flex;
+        }
+        .deleteButton {
+          @apply hover:text-red-600 hover:border-red-600 transition-all  max-sm:duration-150;
+        }
+      }
+      
     }
-    .exitButton{
-      width: 5vw;
-      height: 5vw;
-      color: white;
-      font-size: 4vw;
-      font-weight: 100;
-    }
-  }
-  .cartItem{
-    @apply w-full h-[15vw] border text-center text-white;
-    
-    .infoDiv{
-      display: grid;
-      grid-template-columns: repeat(6,1fr);
-      align-items: center;
-    }
-    .countButtons{
-      display: flex;
-    }
-    .deleteButton{
-
-    }
-  }
-  .byDiv{
-    position: absolute;
-    bottom: 0;
-    right: 1vw;
-    text-align: right;
-    color: white;
-    font-size: 2vw;
-    p{
-
-    }
-    botton{
-      color :red
+    .byDiv {
+      @apply w-[88.5vw] h-[4vw] bottom-0 absolute text-right flex justify-around items-center max-sm:h-[9vw] max-sm:w-[88.5vw] ;
+      p {
+        @apply text-[1.5vw] pr-[2vw] max-sm:text-[3.5vw];
+      }
+      button {
+        @apply text-[1.5vw] w-[10vw] h-[3vw] border-blue-700 border border-solid border-r-[0.1vw] hover:text-green-700 hover:border-green-700 max-sm:h-[7vw] max-sm:w-[24vw] max-sm:text-[4.5vw] max-sm:mr-[1.5vw];
+      }
     }
   }
 }
+
+
+
+
+ 
+
+
+
+
+
+
+
+
