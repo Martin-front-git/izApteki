@@ -7,6 +7,7 @@ import HomePageLayout from "../../../Layouts/HeaderLayout/page";
 import style from "@/app/Styles/Body/ProductsPage.module.scss";
 import Image from "next/image";
 import InfoText from "../infoText/page";
+import Slider from "../slider/page";
 
 const products = data.homeInfo
 
@@ -112,6 +113,8 @@ const ProductPage: React.FC = () => {
         
       </div>
       <InfoText/>
+      <Slider/>
+      <Slider/>
     </HomePageLayout>
   );
 };

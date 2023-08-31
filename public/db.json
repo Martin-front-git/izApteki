@@ -13,40 +13,52 @@
       "image": "/images/nurofen.png"
     },
     {
-      "id": 2,
-      "name": "Нурофен 30 кап. жидкие",
-      "price": 199,
-      "image": "/images/nurofen.png"
-    },
-    {
-      "id": 2,
-      "name": "Нурофен 30 кап. жидкие",
-      "price": 199,
-      "image": "/images/nurofen.png"
-    },
-    {
       "id": 3,
+      "name": "Нурофен 30 кап. жидкие",
+      "price": 199,
+      "image": "/images/nurofen.png"
+    },
+    {
+      "id": 4,
+      "name": "Нурофен 30 кап. жидкие",
+      "price": 199,
+      "image": "/images/nurofen.png"
+    },
+    {
+      "id": 5,
       "name": "Витамин СТаблетки, 20 шт. 10...",
       "price": 145,
       "image": "/images/vitamin.png"
     },
     {
-      "id": 4,
+      "id": 6,
       "name": "Гастрарекс Капсулы, 30 шт. 52... ",
       "price": 285,
       "image": "/images/gastra.png"
     },
     {
-      "id": 5,
+      "id": 7,
       "name": "Ингавирин Капсулы, 7 шт, 90 мг",
       "price": 546,
       "image": "/images/ingavarin.png"
     },
     {
-      "id": 6,
+      "id": 8,
       "name": "Дезодорант аэрозоль Голд му...",
       "price": 290,
       "image": "/images/desodorant.png"
+    },
+    {
+      "id": 9,
+      "name": "Хилак Форте Капли, 100 мл.",
+      "price": 527,
+      "image": "/images/xilak_forte.png"
+    },
+    {
+      "id": 6,
+      "name": "Гастрарекс Капсулы, 30 шт. 52... ",
+      "price": 285,
+      "image": "/images/gastra.png"
     }
   ],
   "selections": [
@@ -288,16 +300,3 @@
     }
   ]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

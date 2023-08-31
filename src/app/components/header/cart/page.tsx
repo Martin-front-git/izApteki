@@ -5,6 +5,7 @@ import { RootState } from "@/app/Store/page";
 import style from "@/app/Styles/Header/Cart.module.scss";
 import Modal from "react-modal";
 import Image from "next/image";
+import { Link } from "react-router-dom";
 
 interface CartItem {
   productId: number;
@@ -28,8 +29,8 @@ const Cart: React.FC = () => {
     dispatch(removeFromCart(productId));
   };
 
-  const handleUpdateQuantity = (productId: number, newQuantity: number) => {
-    dispatch(plusToCart({ productId, quantity: newQuantity }));
+  const handleUpdateQuantity = (productId: number, newQuantity: number, productImage: string, productName: string,productPrice:number) => {
+    dispatch(plusToCart({ productId, quantity: newQuantity, productImage, productName ,productPrice}));
   };
 
   const toggleModal = () => {
@@ -89,33 +90,53 @@ const Cart: React.FC = () => {
       <Modal
        isOpen={isModalOpen}
       overlayClassName={style.overlay}
-       className={style.cartItemsContainer}
-      >
+       className={style.cartItemsContainer}>
         
       {isModalOpen && (
         <div ref={modalRef}>
-        <ul>
-          {cartItems.map((item: CartItem) => (
-            <li key={item.productId} className={style.cartItem}>
-              <span>{item.productName}</span>
-              <span>Цена: {item.productPrice} руб.</span>
-              <span>Товар #{item.productId}</span>
-              <span>Количество: {item.quantity}</span>
-              <Image src={item.productImage} alt={item.productName} width={200} height={200}/>
-              <div>
-                <button onClick={() => handleUpdateQuantity(item.productId, item.quantity - 1)}>-</button>
-                <span>{item.quantity}</span>
-                <button onClick={() => handleUpdateQuantity(item.productId, item.quantity + 1)}>+</button>
+          <div >
+            <div className={style.exitButtonDiv}>
+              <p>Корзина</p>
+              <button className={style.exitButton} onClick={toggleModal}>X</button>
+            </div>
+            
+            {cartItems.map((item: CartItem) => (
+              <>
+              <Link to={`/product/${item.productId}`}>
+                    <div key={item.productId} className={style.cartItem}>
+                <>
+                  <div className={style.infoDiv}>
+                    <Image className={style.image} src={item.productImage} alt={item.productName} width={200} height={200}/>
+                    <span>{item.productName}</span>
+                    
+                    
+                    <span>Цена: {item.productPrice} руб.</span>
+                    <span>Товар #{item.productId}</span>
+                    <span>Количество: {item.quantity}</span>
+                    <div className="flex flex-col">
+                    <div className='flex justify-around'>
+                    <button onClick={() => handleUpdateQuantity(item.productId, item.quantity - 1, item.productImage, item.productName,item.productPrice)}>-</button>
+                    <span>{item.quantity}</span>
+                    <button onClick={() => handleUpdateQuantity(item.productId, item.quantity + 1, item.productImage, item.productName,item.productPrice)}>+</button>
+                    </div>
+                    <div>
+                      <button className={style.deleteButton} onClick={() => handleRemoveFromCart(item.productId)}>
+                      Удалить
+                      </button>
+                    </div>
+                  </div>
+                  </div>
+                  
+                </>
               </div>
-              <button onClick={() => handleRemoveFromCart(item.productId)}>
-                Удалить
-              </button>
-              <button>Купить</button>
-            </li>
-          ))}
-          <p>Общее количество товаров: {totalQuantity}</p>
-          <button onClick={toggleModal}>X</button>
-        </ul>
+              </Link></>
+              
+            ))}
+          </div>
+              <div className={style.byDiv}>
+                <p>Общее количество товаров: {totalQuantity}</p>
+                <button>Купить</button>
+              </div>
       </div>
       )}
       </Modal>
