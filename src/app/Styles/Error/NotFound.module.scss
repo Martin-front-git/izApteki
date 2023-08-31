@@ -1,0 +1,24 @@
+.errorBlock {
+  @apply w-full h-full flex text-[#00395D] font-Montserrat max-md:flex-col max-md:justify-between max-md:w-full max-md:h-full;
+  .infoDiv {
+    @apply w-[50%] h-[100%] py-[3vw] gap-[3vw] flex flex-col justify-center max-md:h-[55vw] max-md:w-full max-md:gap-[7vw];
+    h1 {
+      @apply text-[4vw] font-bold leading-[5vw] max-md:text-[7vw] max-md:leading-[7vw];
+    }
+    p {
+      @apply text-[2vw] leading-[3vw] max-md:text-[4vw] max-md:leading-[5vw];
+    }
+    button {
+      @apply w-[25vw] h-[4vw] rounded-[5px] bg-[#0099E5] max-md:w-[50%] max-md:h-[8vw];
+      a {
+        @apply w-[25vw] h-[4vw] text-[2vw] font-medium leading-[4vw] max-md:text-[4vw];
+      }
+    }
+  }
+  .imgDiv {
+    @apply w-1/2  max-md:w-full;
+    image{
+      @apply max-md:w-full max-md:h-auto;
+    }
+  }
+}
