@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import HeaderLayout from "@/app/Layouts/HeaderLayout/page";
 import axios from "axios";
 import style from '@/app/Styles/Header/Catalog.module.scss'
+import Head from "next/head";
 
 interface IMediacations{
     id: number;
@@ -50,6 +51,7 @@ const CatalogComponent=()=>{
       }
     return(
         <HeaderLayout>
+            
             <div className={style.catalogBlock}>
             <h1 className={style.caption}>Каталог товаров</h1>
                 <div className={style.catalogGridBlock}>

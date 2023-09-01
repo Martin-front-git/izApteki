@@ -1,11 +1,13 @@
 'use client';
 import React from 'react';
-import { Route, Router, Routes } from 'react-router-dom';
 import ProductPage from './components/body/productPage/page';
 import CatalogComponent from './components/header/catalog/page';
 import MainPage from './Layouts/mainPage/page';
+import {Routes, Route} from 'react-router-dom'
 
 function MyApp() {
+  
+
   return (
     <>
       <Routes>
