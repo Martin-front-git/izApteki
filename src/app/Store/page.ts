@@ -1,12 +1,10 @@
 'use client';
 import { Action, ThunkAction, configureStore } from '@reduxjs/toolkit';
 import cartReducer from '.././Store/cartSlice';
-import SliderReducer from './sliderSlice';
 
 export const store = configureStore({
   reducer : {
     cart: cartReducer,
-    slider : SliderReducer
   }
 });
 

@@ -10,10 +10,11 @@ function MyApp() {
 
   return (
     <>
+    
       <Routes>
         <Route path='/' element={<MainPage/>}/>
-        <Route path='/catalog' element={<CatalogComponent/>}/>
-        <Route path={`/product/:productId`} element={<ProductPage/>}/>
+        <Route path='/catalog' element={<CatalogComponent title='Страница каталога'/>}/>
+        <Route path={`/product/:productId`} element={<ProductPage title='Страница продукта'/>}/>
       </Routes>
     </>
   );

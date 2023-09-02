@@ -8,6 +8,7 @@ import style from "@/app/Styles/Body/ProductsPage.module.scss";
 import Image from "next/image";
 import InfoText from "../infoText/page";
 import Slider from "../slider/page";
+import Head from "next/head";
 
 const products = data.homeInfo
 
@@ -18,7 +19,7 @@ interface Product {
   image: string;
 }
 
-const ProductPage: React.FC = () => {
+const ProductPage = ({title}:{title:string}) => {
   const { productId } = useParams<{ productId: string }>();
   const [product, setProduct] = useState<Product | null>(null);
   const [quantity, setQuantity] = useState(1);
@@ -31,6 +32,13 @@ const ProductPage: React.FC = () => {
       setProduct(foundProduct);
     }
   }, [productId]);
+
+  //! Head title
+  useEffect(()=> {
+    if(title){
+        document.title = title;
+    }
+  }, [title]);
 
   const handleAddToCart = () => {
     if (product) {
@@ -49,6 +57,7 @@ const ProductPage: React.FC = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
   };
 
+  
   const handleDecrement = () => {
     setQuantity((prevQuantity) => Math.max(prevQuantity - 1, 1));
   };
@@ -56,9 +65,21 @@ const ProductPage: React.FC = () => {
   if (!product) {
     return <div>Loading...</div>;
   }
+  
 
   return (
     <HomePageLayout>
+      <Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta name="description" content="интернет магазин лекарственных продуктов и косметики, страница продуктов " />
+        <meta name="keywords" content="магазин,лекарственные продуктиб косметика" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Интернет аптека" />
+        <meta property="og:description" content="Интернет аптека" />
+        <meta property="og:image" content="http//.." />
+        <meta property="og:url" content="http//.." />
+      </Head>
       <div className={style.productBlock}>
         <h1 className={style.productName}>{product.name}</h1>
         <div className={style.doubleBlock}>

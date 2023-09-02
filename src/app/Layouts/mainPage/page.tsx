@@ -11,7 +11,7 @@ import HeaderComponent from '@/app/components/header/page';
 function MainPage() {
   return (
     <>
-      <HeaderComponent/>
+      <HeaderComponent title='Главная страница'/>
       <Slider/>
       <Slider/>
       <SearchBlock/>

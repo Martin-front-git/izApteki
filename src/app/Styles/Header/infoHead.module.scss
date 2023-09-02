@@ -1,31 +1,15 @@
 .infoBlock {
-  width: 100%;
-  height: 5vw;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  color: var(--blue, #00395d);
-  font-family: Montserrat;
-  font-size: 1.3vw;
-  font-style: normal;
-  font-weight: 300;
-  text-align: center;
-  display: flex;
-  top : 1vw;
+  @apply w-full h-[5vw] justify-center items-center relative text-[#00395d] font-Montserrat text-[1.3vw] font-normal text-center flex top-[1vw];
   .country {
-    position: absolute;
-    left: 0;
+    @apply absolute left-0;
   }
   .pickup {
-    position: absolute;
-    right: 14vw;
+    @apply absolute right-[14vw];
   }
   .delivery {
-    position: absolute;
-    right: 23vw;
+    @apply absolute right-[23vw];
   }
   .telNum {
-    position: absolute;
-    right: 0;
+    @apply absolute right-0;
   }
 }
