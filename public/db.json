@@ -207,6 +207,170 @@
   ],
   "catalog" : [
     {
+      "medication" : [
+        {"id":1,"name":"Акушерство","list" : [
+          {"name":"улыбается женщина","image":"/images/catalog/1.png"},
+          {"name":"медсестра","image":"/images/catalog/2.png"},
+          {"name":"медицинский работник","image":"/images/catalog/3.png"},
+          {"name":"услуги","image":"/images/catalog/4.png"},
+          {"name":"страхование","image":"/images/catalog/5.png"},
+          {"name":"обслуживание","image":"/images/catalog/7.png"},
+          {"name":"профиль матери ","image":"/images/catalog/8.png"}
+        ]},
+        {"id":2,"name":"Гинекология","list" : [
+          {"name":"Беременность ","image":"/images/catalog/7.png"},
+          {"name":"Медицина ","image":"/images/catalog/8.png"},
+          {"name":"Здоровье ","image":"/images/catalog/9.png"},
+          {"name":"Гинеколог ","image":"/images/catalog/10.png"},
+          {"name":"Акушерство ","image":"/images/catalog/12.png"}
+        ]},
+        {"id":3,"name":"Аллергия","list" : [
+          {"name":"Простуда ","image":"/images/catalog/13.png"},
+          {"name":"Чихание  ","image":"/images/catalog/14.png"},
+          {"name":"Кашель  ","image":"/images/catalog/15.png"},
+          {"name":"Здоровье  ","image":"/images/catalog/16.png"},
+          {"name":"медицина ","image":"/images/catalog/17.png"},
+          {"name":"Сенная лихорадка ","image":"/images/catalog/18.png"}
+        ]},
+        {"id":4,"name":"Анестезия","list" : [
+          {"name":"анестезиолог","image":"/images/catalog/19.png"},
+          {"name":"анестезия ","image":"/images/catalog/20.png"},
+          {"name":"Шприц ","image":"/images/catalog/21.png"},
+          {"name":"Инъекция ","image":"/images/catalog/22.png"},
+          {"name":"медицина ","image":"/images/catalog/23.png"},
+          {"name":"Эпидуральное","image":"/images/catalog/24.png"}
+        ]},
+        {"id":5,"name":"Реанимация","list" : [
+          {"name":"Здравоохранение","image":"/images/catalog/25.png"},
+          {"name":"Аптечки  ","image":"/images/catalog/26.png"},
+          {"name":"Кардиопульмональная  ","image":"/images/catalog/27.png"},
+          {"name":"жизнеобеспечения ","image":"/images/catalog/28.png"},
+          {"name":"медицина ","image":"/images/catalog/29.png"}
+        ]},
+        {"id":6,"name":" Антибиотики","list" : [
+          {"name":"Пенициллин ","image":"/images/catalog/30.png"},
+          {"name":"Антибиотики   ","image":"/images/catalog/31.png"},
+          {"name":"Бактерии   ","image":"/images/catalog/32.png"},
+          {"name":"Фармацевтический  ","image":"/images/catalog/33.png"},
+          {"name":"Бронхит ","image":"/images/catalog/34.png"},
+          {"name":"таблетка ","image":"/images/catalog/35.png"}
+        ]},
+        {"id":7,"name":" Температура","list" : [
+          {"name":"измерительный ","image":"/images/catalog/36.png"},
+          {"name":"измерение   ","image":"/images/catalog/37.png"},
+          {"name":"Цельсия   ","image":"/images/catalog/38.png"},
+          {"name":"Homero  ","image":"/images/catalog/39.png"},
+          {"name":"термометры  ","image":"/images/catalog/40.png"}
+        ]},
+        {"id":1,"name":"Акушерство","list" : [
+          {"name":"улыбается женщина","image":"/images/catalog/1.png"},
+          {"name":"медсестра","image":"/images/catalog/2.png"},
+          {"name":"медицинский работник","image":"/images/catalog/3.png"},
+          {"name":"услуги","image":"/images/catalog/4.png"},
+          {"name":"страхование","image":"/images/catalog/5.png"},
+          {"name":"обслуживание","image":"/images/catalog/7.png"},
+          {"name":"профиль матери ","image":"/images/catalog/8.png"}
+        ]},
+        {"id":2,"name":"Гинекология","list" : [
+          {"name":"Беременность ","image":"/images/catalog/7.png"},
+          {"name":"Медицина ","image":"/images/catalog/8.png"},
+          {"name":"Здоровье ","image":"/images/catalog/9.png"},
+          {"name":"Гинеколог ","image":"/images/catalog/10.png"},
+          {"name":"Акушерство ","image":"/images/catalog/12.png"}
+        ]},
+        {"id":3,"name":"Аллергия","list" : [
+          {"name":"Простуда ","image":"/images/catalog/13.png"},
+          {"name":"Чихание  ","image":"/images/catalog/14.png"},
+          {"name":"Кашель  ","image":"/images/catalog/15.png"},
+          {"name":"Здоровье  ","image":"/images/catalog/16.png"},
+          {"name":"медицина ","image":"/images/catalog/17.png"},
+          {"name":"Сенная лихорадка ","image":"/images/catalog/18.png"}
+        ]},
+        {"id":4,"name":"Анестезия","list" : [
+          {"name":"анестезиолог","image":"/images/catalog/19.png"},
+          {"name":"анестезия ","image":"/images/catalog/20.png"},
+          {"name":"Шприц ","image":"/images/catalog/21.png"},
+          {"name":"Инъекция ","image":"/images/catalog/22.png"},
+          {"name":"медицина ","image":"/images/catalog/23.png"},
+          {"name":"Эпидуральное","image":"/images/catalog/24.png"}
+        ]},
+        {"id":5,"name":"Реанимация","list" : [
+          {"name":"Здравоохранение","image":"/images/catalog/25.png"},
+          {"name":"Аптечки  ","image":"/images/catalog/26.png"},
+          {"name":"Кардиопульмональная  ","image":"/images/catalog/27.png"},
+          {"name":"жизнеобеспечения ","image":"/images/catalog/28.png"},
+          {"name":"медицина ","image":"/images/catalog/29.png"}
+        ]},
+        {"id":6,"name":" Антибиотики","list" : [
+          {"name":"Пенициллин ","image":"/images/catalog/30.png"},
+          {"name":"Антибиотики   ","image":"/images/catalog/31.png"},
+          {"name":"Бактерии   ","image":"/images/catalog/32.png"},
+          {"name":"Фармацевтический  ","image":"/images/catalog/33.png"},
+          {"name":"Бронхит ","image":"/images/catalog/34.png"},
+          {"name":"таблетка ","image":"/images/catalog/35.png"}
+        ]},
+        {"id":7,"name":" Температура","list" : [
+          {"name":"измерительный ","image":"/images/catalog/36.png"},
+          {"name":"измерение   ","image":"/images/catalog/37.png"},
+          {"name":"Цельсия   ","image":"/images/catalog/38.png"},
+          {"name":"Homero  ","image":"/images/catalog/39.png"},
+          {"name":"термометры  ","image":"/images/catalog/40.png"}
+        ]},
+        {"id":1,"name":"Акушерство","list" : [
+          {"name":"улыбается женщина","image":"/images/catalog/1.png"},
+          {"name":"медсестра","image":"/images/catalog/2.png"},
+          {"name":"медицинский работник","image":"/images/catalog/3.png"},
+          {"name":"услуги","image":"/images/catalog/4.png"},
+          {"name":"страхование","image":"/images/catalog/5.png"},
+          {"name":"обслуживание","image":"/images/catalog/7.png"},
+          {"name":"профиль матери ","image":"/images/catalog/8.png"}
+        ]},
+        {"id":2,"name":"Гинекология","list" : [
+          {"name":"Беременность ","image":"/images/catalog/7.png"},
+          {"name":"Медицина ","image":"/images/catalog/8.png"},
+          {"name":"Здоровье ","image":"/images/catalog/9.png"},
+          {"name":"Гинеколог ","image":"/images/catalog/10.png"},
+          {"name":"Акушерство ","image":"/images/catalog/12.png"}
+        ]},
+        {"id":3,"name":"Аллергия","list" : [
+          {"name":"Простуда ","image":"/images/catalog/13.png"},
+          {"name":"Чихание  ","image":"/images/catalog/14.png"},
+          {"name":"Кашель  ","image":"/images/catalog/15.png"},
+          {"name":"Здоровье  ","image":"/images/catalog/16.png"},
+          {"name":"медицина ","image":"/images/catalog/17.png"},
+          {"name":"Сенная лихорадка ","image":"/images/catalog/18.png"}
+        ]},
+        {"id":4,"name":"Анестезия","list" : [
+          {"name":"анестезиолог","image":"/images/catalog/19.png"},
+          {"name":"анестезия ","image":"/images/catalog/20.png"},
+          {"name":"Шприц ","image":"/images/catalog/21.png"},
+          {"name":"Инъекция ","image":"/images/catalog/22.png"},
+          {"name":"медицина ","image":"/images/catalog/23.png"},
+          {"name":"Эпидуральное","image":"/images/catalog/24.png"}
+        ]},
+        {"id":5,"name":"Реанимация","list" : [
+          {"name":"Здравоохранение","image":"/images/catalog/25.png"},
+          {"name":"Аптечки  ","image":"/images/catalog/26.png"},
+          {"name":"Кардиопульмональная  ","image":"/images/catalog/27.png"},
+          {"name":"жизнеобеспечения ","image":"/images/catalog/28.png"},
+          {"name":"медицина ","image":"/images/catalog/29.png"}
+        ]},
+        {"id":6,"name":" Антибиотики","list" : [
+          {"name":"Пенициллин ","image":"/images/catalog/30.png"},
+          {"name":"Антибиотики   ","image":"/images/catalog/31.png"},
+          {"name":"Бактерии   ","image":"/images/catalog/32.png"},
+          {"name":"Фармацевтический  ","image":"/images/catalog/33.png"},
+          {"name":"Бронхит ","image":"/images/catalog/34.png"},
+          {"name":"таблетка ","image":"/images/catalog/35.png"}
+        ]},
+        {"id":7,"name":" Температура","list" : [
+          {"name":"измерительный ","image":"/images/catalog/36.png"},
+          {"name":"измерение   ","image":"/images/catalog/37.png"},
+          {"name":"Цельсия   ","image":"/images/catalog/38.png"},
+          {"name":"Homero  ","image":"/images/catalog/39.png"},
+          {"name":"термометры  ","image":"/images/catalog/40.png"}
+        ]}
+      ],
       "medications" : [
         {"id":1,"name":"Акушерство"},
         {"id":2,"name":"гинекология"},

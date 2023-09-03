@@ -3,6 +3,7 @@ import HeaderLayout from "@/app/Layouts/HeaderLayout/page";
 import axios from "axios";
 import style from "@/app/Styles/Header/Catalog.module.scss";
 import Head from "next/head";
+import { Link } from "react-router-dom";
 
 interface IMediacations {
   id: number;
@@ -87,7 +88,7 @@ const CatalogComponent = ({ title }: { title: string }) => {
                 <div key={index}>
                   {productData.medications.map((item: any) => (
                     <>
-                      <p key={item.id}>{item.name}</p>
+                      <Link to={`/product/${item.id}`}><p key={item.id}>{item.name}</p></Link>
                     </>
                   ))}
                 </div>

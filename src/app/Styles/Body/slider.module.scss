@@ -1,12 +1,12 @@
 .sliderWrapper {
   @apply overflow-hidden relative font-Montserrat h-[430px] my-[3vw];
   .caption {
-    @apply w-full text-[3vw] font-bold leading-[34px] text-[#00395d];
+    @apply w-full text-[3vw] font-bold leading-[34px] text-[#00395d] max-sm:text-[5vw];
   }
   .actualList {
     @apply w-full flex my-[1vw] text-[1.5vw];
     p {
-      @apply  py-[1vw] px-[1vw] text-[#00395d] hover:border-b hover:border-solid hover:border-[#00395d] hover:transition-all hover:duration-500;
+      @apply  py-[1vw] px-[1vw] text-[#00395d] hover:border-b hover:border-solid hover:border-[#00395d] hover:transition-all hover:duration-500 max-sm:text-[2.3vw];
     }
   }
   .sliderBlock {
@@ -28,10 +28,10 @@
         @apply w-full h-[60px] flex flex-col justify-between items-center;
         .btnLeft,
         .btnRight {
-          @apply w-[20px] h-[20px] bg-[#00395d] text-white font-normal text-base rounded-md mx-1 my-1;
+          @apply w-[20px] h-[20px] bg-[#00395d] text-white font-normal text-base rounded-md mx-1 my-1 max-sm:text-[4vw] max-sm:flex max-sm:items-center max-sm:justify-center;
         }
         .count {
-          @apply text-xs text-center text-[#00395d];
+          @apply text-xs text-center text-[#00395d] max-sm:text-[3.5vw];
         }
         .byBtn {
           @apply w-[25px] h-[25px] border border-solid border-blue-500 rounded-md;
@@ -40,7 +40,7 @@
     }
   }
   .navButtonDiv {
-    @apply w-full h-[40px] flex justify-between items-center absolute z-10 top-[300px];
+    @apply w-full h-[40px] flex justify-between items-center absolute z-10 top-[300px] max-sm:top-[54vw];
     .slideButtonLeft,
     .slideButtonRight {
       @apply border-none cursor-pointer text-lg transition-colors duration-300 ease-in-out w-[30px] h-[30px];

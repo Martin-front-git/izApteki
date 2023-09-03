@@ -1,8 +1,8 @@
 
   .footerBlock {
-    @apply w-full h-[20vw] flex items-center justify-center bg-[#00395d]  text-[#f7f9fa] text-[1.2vw]  max-md:text-[1.5vw] max-sm:w-[100%] max-sm:h-[25vw] max-sm:text-[2vw];
+    @apply w-full h-[15vw] flex items-center justify-center bg-[#00395d]  text-[#f7f9fa] text-[1.2vw]  max-md:text-[1.5vw] max-sm:w-[100%] max-sm:h-[30vw];
     .gridBlock{
-      @apply w-[90%] h-[17vw] grid grid-rows-4 grid-cols-4 justify-center items-center max-md:grid-cols-2;
+      @apply w-[90%] h-[10vw] grid grid-rows-4 grid-cols-4 justify-center items-center max-md:grid-cols-2 max-md:h-[11vw] max-md:text-[1.5vw] max-sm:text-[3vw] max-sm:h-[20vw];
       p{
         @apply max-md:text-[] cursor-pointer;
       }

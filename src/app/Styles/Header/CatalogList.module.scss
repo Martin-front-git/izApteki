@@ -1,0 +1,24 @@
+.catalogListBlock {
+  @apply flex text-[#00395d] font-Montserrat mt-[2vw] max-sm:flex-col max-sm:items-center max-sm:text-center;
+  .catalogList {
+    @apply w-[20%] h-full overflow-y-auto pt-[1vw] max-sm:text-left max-sm:w-[97vw];
+  }
+  .catalogOut {
+    @apply w-[80%] h-auto relative;
+    .caption{
+      @apply w-full h-[5vw] text-[3vw] py-[1vw] px-[3vw];
+    }
+    .flexDiv {
+      @apply grid grid-cols-3 justify-center items-center content-center w-[80%] h-auto gap-[1vw] mx-auto my-[4vw] max-md:grid-cols-2 max-sm:grid-cols-1;
+      .item {
+        @apply w-full h-[25vw] p-10 py-[1vw] px-[1vw] border border-solid border-gray-300 rounded-[0.5vw] max-md:w-full max-md:h-[38vw] max-sm:w-full max-sm:h-[60vw];
+        p{
+          @apply py-[1vw] px-[1vw];
+        }
+        .image{
+          @apply w-[15vw] h-[15vw] max-md:w-full max-md:h-[25vw] max-sm:w-full max-sm:h-[50vw];
+        }
+      }
+    }
+  }
+}

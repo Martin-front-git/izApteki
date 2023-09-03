@@ -77,7 +77,7 @@ const SearchList: React.FC = () => {
               )}
             </div>
           </div>
-          <button className={style.productButton}>Продукт</button>
+          <Link to='/catalogList'><button className={style.productButton}>Продукт</button></Link>
           <button onClick={handleSearchButtonClick} className={style.searchButton}>Найти</button>
         
       </div>

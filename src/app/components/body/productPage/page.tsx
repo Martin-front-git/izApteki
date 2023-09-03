@@ -52,12 +52,9 @@ const ProductPage = ({title}:{title:string}) => {
       dispatch(addToCart(cartItem));
     }
   };
-
   const handleIncrement = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
   };
-
-  
   const handleDecrement = () => {
     setQuantity((prevQuantity) => Math.max(prevQuantity - 1, 1));
   };
