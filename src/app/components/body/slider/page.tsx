@@ -3,12 +3,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { plusToCart } from "@/app/Store/cartSlice";
-import axios from "axios";
 import style from "@/app/Styles/Body/slider.module.scss";
 import Image from "next/image";
 import basket from '../../../../../public/images/basket.png';
 import left from '../../../../../public/images/left.png'
 import right from '../../../../../public/images/right.png'
+import { useTodos } from "@/app/hooks/useTodos/page";
 
 interface IProdList {
   id: number;
@@ -22,6 +22,8 @@ const Slider: React.FC = () => {
   const [counters, setCounters] = useState<{ [key: number]: number }>({});
   const [sliderOffset, setSliderOffset] = useState(0);
   const sliderBlockRef = useRef<HTMLDivElement | null>(null);
+  //!getting data from own hook
+  const { isFetching, data } = useTodos();
 
   const handleAddToCart = (productId: number,productPrice: number, productName: string, productImage: string) => {
     dispatch(plusToCart({ productId, productName,productPrice, productImage, quantity: counters[productId] || 1 }));
@@ -43,19 +45,7 @@ const Slider: React.FC = () => {
     }
   };
 
-  const [data, setData] = useState<IProdList[]>();
-
-  useEffect(() => {
-    axios
-      .get("/db.json")
-      .then((response) => response.data.homeInfo)
-      .then((data) => {
-        setData(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
+ 
   useEffect(() => {
     if (sliderBlockRef.current && data) {
       const sliderBlockWidth = sliderBlockRef.current.clientWidth;
@@ -70,10 +60,6 @@ const Slider: React.FC = () => {
     }
   }, [sliderOffset, data]);
 
-  if (!data) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div className={style.sliderWrapper}>
       <h1 className={style.caption}>Товары дня</h1>
@@ -85,7 +71,7 @@ const Slider: React.FC = () => {
         <p>Здоровое питание</p>
       </div>
       <div className={style.sliderBlock} ref={sliderBlockRef} style={{ transform: `translateX(${sliderOffset}px)` }}>
-        {data.map((item: IProdList) => (
+        {isFetching ? (<p>Loading...</p>) : (data.homeInfo.map((item: IProdList) => (
           <div key={item.id} className={style.sliderItem}>
             <div className={style.infoDiv}>
                <span key={item.id} className='flex justify-between'>
@@ -111,7 +97,7 @@ const Slider: React.FC = () => {
                </div>
              </div>
           </div>
-        ))}
+        )))}
         
       </div>
       <div className={style.navButtonDiv}>

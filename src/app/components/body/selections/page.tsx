@@ -1,37 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import style from "@/app/Styles/Body/Selections.module.scss";
 import Image from "next/image";
-import axios from "axios";
+import { useTodos } from "@/app/hooks/useTodos/page";
 
-interface ISelections {
-  id: number;
-  name: string;
-  image: string;
-  svg: string;
-}
 
 const Selections = () => {
-  const [data, setData] = useState<ISelections[]>();
-
-  useEffect(() => {
-    axios
-      .get("/db.json")
-      .then((response) => response.data.selections)
-      .then((data) => setData(data))
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
-  if (!data) {
-    return <div>Loading...</div>;
-  }
+//!getting data from own hook
+const { isFetching, data } = useTodos();
 
   return (
     <>
       <div className={style.selectionsContainer}>
         <h1 className={style.caption}>Подборки</h1>
         <div className={style.selectionsBlock}>
-          {data.map((items: any) => (
+          {isFetching ? (<p>Loading...</p>) : (data.selections.map((items: any) => (
             <>
               <div className={style.selectionsDiv}>
                 <Image
@@ -51,7 +33,7 @@ const Selections = () => {
                 <p className={style.selName}>{items.name}</p>
               </div>
             </>
-          ))}
+          )))}
         </div>
       </div>
     </>

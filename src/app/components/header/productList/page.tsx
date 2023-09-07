@@ -1,36 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import style from "@/app/Styles/Header/ProductList.module.scss";
-import axios from "axios";
-
-interface IProdList {
-  id: number;
-  name: string;
-}
+import { useTodos } from "@/app/hooks/useTodos/page";
 
 let ProductList = () => {
-  const [data, setData] = useState<IProdList[]>();
+  //!getting data from own hook
+  const { isFetching, data } = useTodos();
 
-  useEffect(() => {
-    axios
-      .get("/db.json")
-      .then((response) => response.data.prodList)
-      .then((data) => setData(data))
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
-  if (!data) {
-    return <div>Loading...</div>;
-  }
-
-  let prodMap = data.map((pr: any) => (
-    <span key={pr.id} className={style.products}>
-      {pr.name}
-    </span>
-  ));
   return (
     <>
-      <div className={style.productBlock}>{prodMap}</div>
+      <div className={style.productBlock}>
+        {isFetching ? (
+          <p>Loading...</p>
+        ) : (
+          data.prodList.map((pr: any) => (
+            <span key={pr.id} className={style.products}>
+              {pr.name}
+            </span>
+          ))
+        )}
+      </div>
     </>
   );
 };

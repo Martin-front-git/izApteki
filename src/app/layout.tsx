@@ -5,6 +5,11 @@ import { Provider } from 'react-redux'
 import {store} from './Store/page'
 import { BrowserRouter } from 'react-router-dom';
 import { Montserrat } from 'next/font/google'
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from '@tanstack/react-query'
 
 
 const inter = Montserrat({ subsets: ['latin'] ,weight : '700'})
@@ -22,11 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <QueryClientProvider client={new QueryClient}>
         <Provider store={store}>
           <BrowserRouter>
           {children}
           </BrowserRouter>
         </Provider>
+        </QueryClientProvider>
       </body>
     </html>
   )

@@ -1,27 +1,17 @@
 import HeaderLayout from "@/app/Layouts/HeaderLayout/page";
-import axios from "axios";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import style from '@/app/Styles/Header/CatalogList.module.scss';
+import { useTodos } from "@/app/hooks/useTodos/page";
 
 const CatalogList = () => {
-  const [data, setData] = useState<any>(null);
+  //!getting data from own hook
+  const { isFetching, data } = useTodos();
+  
   const [selectedProductId, setSelectedProductId] = useState<number | null>(
     null
   );
-
-  useEffect(() => {
-    axios
-      .get("/db.json")
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
-
   const handleProductClick = (productId: number) => {
     setSelectedProductId(productId);
   };
@@ -30,7 +20,7 @@ const CatalogList = () => {
     <HeaderLayout>
       <div className={style.catalogListBlock}>
         <div className={style.catalogList}>
-          {data?.catalog.map((productData: any, index: number) => (
+          {isFetching ? (<p>Loading...</p>) : (data.catalog.map((productData: any, index: number) => (
             <div key={index} className='max-sm:w-[96vw] max-sm:h-[54vw] max-sm:grid max-sm:grid-cols-3'>
               {productData.medication.map((item: any) => (
                 <div key={item.id} >
@@ -43,12 +33,12 @@ const CatalogList = () => {
                 </div>
               ))}
             </div>
-          ))}
+          )))}
         </div>
         <div className={style.catalogOut}>
           {selectedProductId !== null && (
             <div >
-              {data?.catalog.map((productData: any, index: number) => {
+              {isFetching ? (<p>Loading...</p>) : (data.catalog.map((productData: any, index: number) => {
                 const selectedProduct = productData.medication.find(
                   (item: any) => item.id === selectedProductId
                 );
@@ -75,7 +65,7 @@ const CatalogList = () => {
                    </div>
                   )
                 );
-              })}
+              }))}
             </div>
           )}
         </div>
